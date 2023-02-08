@@ -2,6 +2,7 @@ import openai
 import speech_recognition as sr
 import os
 import playsound
+from voice import speak
 from gtts import gTTS
 
 openai.api_key = "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"
@@ -41,9 +42,11 @@ while True:
 
     print(response_str)
     # Generate audio using gTTS
-    tts = gTTS(text=response_str, lang='en')
-    tts.save("tts.mp3")
-    # Play the generated audio
-    playsound.playsound("tts.mp3")
-    os.remove("tts.mp3")
-    # os.system("start tts.mp3")
+    # tts = gTTS(text=response_str, lang='en')
+    # tts.save("tts.mp3")
+    # # Play the generated audio
+    # playsound.playsound("tts.mp3")
+    # os.remove("tts.mp3")
+    # # os.system("start tts.mp3")
+
+    speak(response_str)
