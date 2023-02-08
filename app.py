@@ -7,9 +7,12 @@ from gtts import gTTS
 openai.api_key = "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"
 
 r = sr.Recognizer()
-mic = sr.Microphone(device_index=1)
 
-print(sr.Microphone.list_microphone_names())
+
+mic = sr.Microphone(device_index=1) #device_index=None or device_index=1
+
+# for index, name in enumerate(sr.Microphone.list_microphone_names()):
+#     print("Microphone with name \"{1}\" found for `Microphone(device_index={0})`".format(index, name))
 
 conversation = ""
 user_name = "Edward"
