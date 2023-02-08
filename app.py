@@ -1,18 +1,18 @@
 import openai
 import speech_recognition as sr
 import os
-import playsound 
+import playsound
 from gtts import gTTS
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 r = sr.Recognizer()
 
 
-mic = sr.Microphone(device_index=1) #device_index=None or device_index=1
+mic = sr.Microphone(device_index=2) #device_index=None or device_index=1
 
-# for index, name in enumerate(sr.Microphone.list_microphone_names()):
-#     print("Microphone with name \"{1}\" found for `Microphone(device_index={0})`".format(index, name))
+for index, name in enumerate(sr.Microphone.list_microphone_names()):
+    print("Microphone with name \"{1}\" found for `Microphone(device_index={0})`".format(index, name))
 
 conversation = ""
 user_name = "Edward"
