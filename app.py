@@ -29,6 +29,11 @@ while True:
 
     if "do something" in user_input.lower():
         response_str = "Playing a sound."
+
+    if user_input.startswith("whisper"):
+        whisper_input = user_input.replace("whisper", "", 1)
+        response_str = whisper_input + "\n(whispered)"
+        
     else:
         prompt = user_name + ": " + user_input + "\nBot:" 
         conversation += prompt
