@@ -28,17 +28,47 @@ while True:
     except:
         continue
 
-    if fuzz.token_set_ratio(user_input.lower(), "what is your return policy") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
-        response_str = "Our return policy is that you can return items within 30 days of purchase for a full refund. Please make sure the item is in its original condition and packaging."
+    if fuzz.token_set_ratio(user_input.lower(), "return policy") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+        response_str = "Our return policy is that you can return items within 30 days of purchase for a full refund."
+        
+    elif fuzz.token_set_ratio(user_input.lower(), "order status") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+        response_str = "You can check the status of your order by logging into your account on our website"
 
-    elif fuzz.token_set_ratio(user_input.lower(), "what is your return policy") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
-        response_str = "You can check the status of your order by logging into your account on our website or by contacting us at (insert customer service number here). We'll be happy to help you track down your shipment."
+    elif fuzz.token_set_ratio(user_input.lower(), "customer support") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+        response_str = "You can reach our customer support team by phone"
 
-    elif fuzz.token_set_ratio(user_input.lower(), "what is your return policy") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
-        response_str = "You can reach our customer support team by phone at (insert customer service number here) or by email at (insert customer service email address here). We're available from 9am to 5pm PST, Monday to Friday."
+    elif fuzz.token_set_ratio(user_input.lower(), "cancel order") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+        response_str = "If you'd like to cancel your order, please contact customer support"
 
-    elif fuzz.token_set_ratio(user_input.lower(), "what is your return policy") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
-        response_str = "If you'd like to cancel your order, please contact our customer support team as soon as possible. They'll be able to assist you in cancelling your order and processing a refund if necessary."
+    elif fuzz.token_set_ratio(user_input.lower(), "shipping information") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+        response_str = "You can find our shipping information, including transit times and delivery dates, on our website"
+
+    elif fuzz.token_set_ratio(user_input.lower(), "warranty") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+            response_str = "We offer a one-year warranty on all of our products, covering defects in materials and workmanship"
+
+    elif fuzz.token_set_ratio(user_input.lower(), "payment methods") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+            response_str = "We accept a variety of payment methods, including credit cards, PayPal, and Apple Pay"
+
+    elif fuzz.token_set_ratio(user_input.lower(), "product availability") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+            response_str = "You can check the availability of a product on our website by searching for the item"
+
+    elif fuzz.token_set_ratio(user_input.lower(), "price match") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+            response_str = "We offer a price match guarantee, so if you find the same product for a lower price elsewhere, we'll match it"
+
+    elif fuzz.token_set_ratio(user_input.lower(), "privacy policy") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+            response_str = "You can find our privacy policy on our website, which explains how we protect and use your personal information"
+
+    elif fuzz.token_set_ratio(user_input.lower(), "account information") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+            response_str = "You can view and update your account information by logging into your account on our website"
+
+    elif fuzz.token_set_ratio(user_input.lower(), "return process") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+            response_str = "The return process is easy and straightforward. Simply initiate a return through your account on our website"
+
+    elif fuzz.token_set_ratio(user_input.lower(), "gift cards") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+            response_str = "We offer gift cards in various denominations, which can be redeemed on our website or in-store"
+
+    elif fuzz.token_set_ratio(user_input.lower(), "affiliate program") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+            response_str = "Our affiliate program allows you to earn commission by promoting our products to your friends and followers"
 
     else:
         prompt = user_name + ": " + user_input + "\nBot:" 
