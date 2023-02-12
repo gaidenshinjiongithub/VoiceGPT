@@ -6,7 +6,7 @@ import os
 
 def speak(text = None):
     url = "https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
-    voice_id = "yoZ06aMxZJJ28mfd3POQ"
+    voice_id = "EXAVITQu4vr4xnSDxMaL"
     api_key = "26ce4b8bbc06592336d01d9fe9fd0069"
 
     data = {
