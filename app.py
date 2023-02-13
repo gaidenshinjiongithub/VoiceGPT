@@ -32,5 +32,15 @@ def main(inputs):
 
     return speak(response_str)
 
-app = gr.Interface(main, ["text"], "audio", examples=[("What's your return policy?",)])
-app.launch()
+with gr.Blocks() as demo:
+
+    chatbox = gr.Textbox(label="enter message: ")
+    send_btn = gr.Button(value="Send")
+
+    output = gr.Audio(label="Chat Output")
+
+    send_btn.click(main, inputs=chatbox, outputs=output)
+
+    # gr.Interface(main, ["text"], "audio", examples=[("What's your return policy?",)]).launch()
+
+demo.launch()
