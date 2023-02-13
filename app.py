@@ -29,11 +29,20 @@ while True:
         continue
 
 
-    if fuzz.token_set_ratio(user_input.lower(), "turn off lights") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
-        response_str = "Sure, turning off lights."
+    if fuzz.token_set_ratio(user_input.lower(), "return policy") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+        response_str = "Our return policy is that you can return items within 30 days of purchase for a full refund."
         
-    elif fuzz.token_set_ratio(user_input.lower(), "call contacts") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
-        response_str = "No problem"
+    elif fuzz.token_set_ratio(user_input.lower(), "order status") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+        response_str = "You can check the status of your order by logging into your account on our website"
+
+    elif fuzz.token_set_ratio(user_input.lower(), "customer support") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+        response_str = "You can reach our customer support team by phone"
+
+    elif fuzz.token_set_ratio(user_input.lower(), "cancel order") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+        response_str = "If you'd like to cancel your order, please contact customer support"
+
+    elif fuzz.token_set_ratio(user_input.lower(), "shipping information") >= 60 or fuzz.token_set_ratio(user_input.lower(), "repeat") >= 60:
+        response_str = "You can find our shipping information, including transit times and delivery dates, on our website"
    
 
     else:
