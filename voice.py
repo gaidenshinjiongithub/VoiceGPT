@@ -2,12 +2,10 @@ import requests
 import playsound
 import os
 
-
-
 def speak(text = None):
     url = "https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
-    voice_id = "EXAVITQu4vr4xnSDxMaL"
-    api_key = "26ce4b8bbc06592336d01d9fe9fd0069"
+    voice_id = "EXAVITQu4vr4xnSDxMaL" #voice id, you can find it in the documentation, i chose bella.
+    # api_key = "your api key"
 
     data = {
     "text": text
